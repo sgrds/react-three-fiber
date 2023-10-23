@@ -3,7 +3,7 @@ import React from "react";
 const ControlPanel = ({ controls, setControls }) => {
   return (
     <div className="min-w-xl absolute bottom-0 right-0 rounded-md bg-white px-6 py-4 shadow-md ">
-      <h1 className="pb-2 text-lg font-medium">Control Pannel</h1>
+      <h1 className="pb-2 text-lg font-medium">Control Panel</h1>
       <div className="grid gap-4">
         <label className="relative inline-flex cursor-pointer items-center">
           <input
