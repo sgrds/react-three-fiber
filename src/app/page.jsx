@@ -7,14 +7,21 @@ import ControlPanel from "./controlPanel";
 
 export default function Home() {
   const [controls, setControls] = useState({ hdri: false, damping: true });
+
   return (
     <div className="flex h-screen w-screen items-center justify-center">
       <Canvas
+        onCreated={(state) => {
+          // 45degree tilted camera
+          console.log(
+            state.camera.rotation._y,
+          ); /* -0.7853981633974485 radianwhich is equal to -45.0000000001degree */
+        }}
         className="cursor-pointer"
         frameloop="demand"
         camera={{
-          position: [-0.02, 0.01, 0],
-          fov: 20,
+          position: [-0.5, 0.5, 0],
+          fov: 30,
           near: 0.1,
           far: 200,
         }}
